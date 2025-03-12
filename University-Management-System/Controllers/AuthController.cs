@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using University_Management_System.Interfaces;
 using University_Management_System.Models.DataConnection;
 using University_Management_System.Models.DTO;
-using University_Management_System.Services;
 
 namespace University_Management_System.Controllers
 {

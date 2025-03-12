@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using University_Management_System.Interfaces;
 using University_Management_System.Models.DataConnection;
 using University_Management_System.Services;
 
@@ -27,7 +28,7 @@ builder.Services.AddSwaggerGen(op =>
     op.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Welcome",
+        Title = "University-Management-System",
         Description = "Web Api.NetCore"
     });
 

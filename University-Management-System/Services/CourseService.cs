@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using University_Management_System.Interfaces;
 using University_Management_System.Models.DataConnection;
 using University_Management_System.Models.DTO;
 using University_Management_System.Models.Entities;

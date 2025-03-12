@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using University_Management_System.Interfaces;
 using University_Management_System.Models.Entities;
-using University_Management_System.Services;
 
 namespace University_Management_System.Controllers
 {

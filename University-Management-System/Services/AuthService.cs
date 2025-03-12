@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using University_Management_System.Interfaces;
 using University_Management_System.Models.DataConnection;
 using University_Management_System.Models.DTO;
 using University_Management_System.Models.Entities;
