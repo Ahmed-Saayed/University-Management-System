@@ -8,6 +8,7 @@
 <ul>
   <li>🔐JWT authentication system for user registration and login.</li>
   <li>CRUD operations for Students, Courses, Teachers, Departments, and Faculties.</li>
+  <li>Methods authorized by manager.</li>
   <li>Many-to-many relationship between Students and Courses.</li>
   <li>One-to-many relationships between Department and Students, Faculty and Departments, Department and Students, Department and Courses.</li>
 </ul>
