@@ -95,17 +95,9 @@ This API uses JWT authentication for user registration and login. Users need to 
 <h2>🌹How to Run the Project</h2>
 <ol>
   <li>Clone this repository to your local machine.</li>
-  <li>Open the project in your preferred IDE (Visual Studio, Visual Studio Code, etc.).</li>
-  <li>Add your connection string in Model/DataConnection/Data</li>
-  <li>Install important packages from Manage NuGet Pachages
-    <code>Microsoft.AspNetCore.Authentication.JwtBearer</code> 
-    <code>Microsoft.EntityFrameworkCore.Tools</code> 
-    <code>Microsoft.EntityFrameworkCore.SqlServer</code> 
-    <code>Microsoft.EntityFrameworkCore</code> 
-    <code>Microsoft.EntityFrameworkCore</code>
-    <code>AutoMapper.Extensions.Microsoft.DependencyInjection</code></li>
+  <li>Open the project in your preferred IDE.</li>
   <li>Add migration <code>Add-Migration init</code></li>
   <li>Update Data base <code>Update-Database</code></li>
   <li>Run the project</li>
-  <li>Finally Do not Forget to Register as a manager with Email  = HellowIamManager and any password to be Authorized to access Methods</li>
+  <li>Finally do not Forget to Register as a manager with Email  = HellowIamManager with any password to be Authorized to access Methods</li>
 </ol>
