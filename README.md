@@ -10,6 +10,7 @@
   <li>🔑Hashed Password Encryption for users.</li>
   <li>CRUD operations for Students, Courses, Teachers, Departments, and Faculties.</li>
   <li>Methods authorized by manager.</li>
+  <li>Repository Pattern for stucture and cleaning code with reduce duplication.</li>
   <li>Many-to-many relationship between Students and Courses.</li>
   <li>One-to-many relationships between Department and Students, Faculty and Departments, Department and Students, Department and Courses.</li>
 </ul>
