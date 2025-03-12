@@ -105,5 +105,5 @@ This API uses JWT authentication for user registration and login. Users need to 
   <li>Add migration <code>Add-Migration init</code></li>
   <li>Update Data base <code>Update-Database</code></li>
   <li>Run the project</li>
-  <li>Finally Dont Forget to Register as a manager with Email  = HellowIamManager and any password to be Authorized to access Methods</li>
+  <li>Finally Do not Forget to Register as a manager with Email  = HellowIamManager and any password to be Authorized to access Methods</li>
 </ol>
