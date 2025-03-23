@@ -18,8 +18,6 @@
 <h2>📌Endpoints</h2>
 
  <h4>Its guaranted that when you run , the app will add initialy manager with email = "HellowIamManager" , and password = "itspass"</h4>
-
- <h4>Its garuantee that when you run the project first time it will create initially manger with  (Email  = "HellowIamManager" with  password = "itspass")</h4>
 <h3>Auth</h3>
 <ul>
   <li><code>Post /api/Auth/Add Manager</code>: for add manager</li>
