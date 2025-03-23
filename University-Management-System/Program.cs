@@ -5,6 +5,7 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using University_Management_System.Interfaces;
 using University_Management_System.Models.DataConnection;
+using University_Management_System.Models.DTO;
 using University_Management_System.Services;
 
 var builder = WebApplication.CreateBuilder(args);               // In Update must enter the "id":..  in body of json
@@ -77,6 +78,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var con = scope.ServiceProvider.GetRequiredService<Data>();
+    var ser = scope.ServiceProvider.GetRequiredService<IAuthService>();
+
+    if (!con.Users.Any())
+        ser.Register(new UserDTO
+        {
+            Email = "HellowIamManager",
+            Password = "itspass"
+        });
+}
 
 if (app.Environment.IsDevelopment())
 {
