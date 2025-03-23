@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using University_Management_System.Interfaces;
@@ -47,6 +48,17 @@ namespace University_Management_System.Controllers
             }
 
             return Ok(ret);
+        }
+        [Authorize(Roles = "Manager")]
+        [HttpPost("Add Manager")]
+        public IActionResult AddManager(UserDTO request)
+        {
+            var man = _authService.AddManager(request);
+            if (man == null)
+                return BadRequest("Invalid Data");
+
+            var rett = mp.Map<UserDTO>(man);
+            return Ok(rett);
         }
 
     }

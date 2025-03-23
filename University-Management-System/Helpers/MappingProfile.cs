@@ -15,6 +15,7 @@ namespace University_Management_System.Helpers
             CreateMap<Department, DepartmentDTO>();
             CreateMap<Faculty, FacultyDTO>();
             CreateMap<User, UserDTO>();
+            CreateMap<Manager, UserDTO>();
         }
     }
 }

@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "University_Management_System.Controllers.AuthController",
+    "Method": "AddManager",
+    "RelativePath": "api/Auth/Add Manager",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "University_Management_System.Models.DTO.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "University_Management_System.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/Login",
     "HttpMethod": "POST",

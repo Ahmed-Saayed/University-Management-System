@@ -84,8 +84,8 @@ using (var scope = app.Services.CreateScope())
     var con = scope.ServiceProvider.GetRequiredService<Data>();
     var ser = scope.ServiceProvider.GetRequiredService<IAuthService>();
 
-    if (!con.Users.Any())
-        ser.Register(new UserDTO
+    if (!con.Managers.Any())
+        ser.AddManager(new UserDTO
         {
             Email = "HellowIamManager",
             Password = "itspass"

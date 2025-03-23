@@ -28,11 +28,15 @@ namespace University_Management_System.Services
             {
                 return "Student";
             }
+            else if (con.Users.Any(o => o.Email == email))
+            {
+                return "User";
+            }
             else if (con.Instructors.Any(o => o.InstructorEmail == email))
             {
                 return "Instructor";
             }
-            else if (email == con.Email_Manager)
+            else if (con.Managers.Any(o => o.Email == email))
             {
                 return "Manager";
             }
@@ -43,13 +47,18 @@ namespace University_Management_System.Services
         public bool Valid_User(UserDTO request)
         {
            var user = con.Users.FirstOrDefault(o => o.Email == request.Email);
-            if (GetTypeOfUser(request.Email)=="Invalid"||new PasswordHasher<User>()
-             .VerifyHashedPassword(user, user.HashedPassword, request.Password) == PasswordVerificationResult.Failed)
-                return false;
+            var man = con.Managers.FirstOrDefault(o => o.Email == request.Email);
 
-            return true;
+            if ((user!=null &&new PasswordHasher<User>()
+             .VerifyHashedPassword(user, user.HashedPassword, request.Password) == PasswordVerificationResult.Success)
+             || (man != null && new PasswordHasher<Manager>()
+             .VerifyHashedPassword(man, man.HashedPassword, request.Password) == PasswordVerificationResult.Success)
+             ||GetTypeOfUser(request.Email) == "Instructor")
+                return true;
+
+            return false;
         }
-        public string CreateToken(User user)
+        public string CreateToken(UserDTO user)
         {
             string role = GetTypeOfUser(user.Email);
             var Claims = new List<Claim>
@@ -96,18 +105,31 @@ namespace University_Management_System.Services
 
         public string Login(UserDTO request)
         {
-            var user = con.Users.FirstOrDefault(o => o.Email == request.Email);
-            if (user is null)
-                return null;
-
             if (!Valid_User(request))
                 return null;
 
-            string token = CreateToken(user);
-
-            return "Hello you are logged in and this is your token  " + token;
+            return "Hello you are logged in and this is your token  " + CreateToken(request);
         }
 
-        
+        public Manager AddManager(UserDTO request)
+        {
+            if(GetTypeOfUser(request.Email) == "Invalid")
+            {
+                var man = new Manager();
+
+                var hashedpass = new PasswordHasher<Manager>()
+                                        .HashPassword(man, request.Password);
+
+                man.Email = request.Email;
+                man.HashedPassword = hashedpass;
+
+                con.Managers.Add(man);
+                con.SaveChanges();
+
+                return man;
+            }
+
+            return null;
+        }
     }
 }

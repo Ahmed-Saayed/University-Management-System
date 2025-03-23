@@ -24,6 +24,7 @@ namespace University_Management_System.Models.DataConnection
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
+        public DbSet<Manager> Managers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder op1)
         {
