@@ -17,9 +17,9 @@
 
 <h2>📌Endpoints</h2>
 
-
+ <h4>Its guaranted that when you run , the app will add initialy manager with email = "HellowIamManager" , and password = "itspass"</h4>
+ 
 <h3>Auth</h3>
-<b>(Ensure first of all register as a manager and its email = HellowIamManager and password = any thing you want!!)</b>
 <ul>
   <li><code>Post /api/Auth/Register</code>: register</li>    
   <li><code>Post /api/Auth/Login</code>: login</li>
@@ -100,5 +100,5 @@ This API uses JWT authentication for user registration and login. Users need to 
   <li>Add migration <code>Add-Migration init</code></li>
   <li>Update Data base <code>Update-Database</code></li>
   <li>Run the project</li>
-  <li>Finally do not Forget to Register as a manager with Email  = HellowIamManager with any password to be Authorized to access Methods</li>
+  <li>Finally do not Forget to Login as a manager to access any thing with (Email  = "HellowIamManager" with  password = "itspass") , to be Authorized to access Methods</li>
 </ol>
