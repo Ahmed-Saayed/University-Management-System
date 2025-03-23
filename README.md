@@ -2,7 +2,7 @@
 
 <h3>🎯This project Api is a University Management System API built using ASP.NET Core. The API provides endpoints to manage various entities in a University environment, such as Students, Courses, Instructors, Departments, and Faculties. It also includes JWT authentication for user registration and login.</h3>
 
-![Image](https://github.com/user-attachments/assets/a60dc2b1-f06c-4aeb-950a-452ffeb68450)
+![Image](https://github.com/user-attachments/assets/732deedc-2564-4909-a4c3-3cff51360a20)
 
 <h2>💥Features</h2>
 <ul>
