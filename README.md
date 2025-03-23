@@ -17,10 +17,10 @@
 
 <h2>📌Endpoints</h2>
 
-
+ <h4>Its guaranted that when you run , the app will add initialy manager with email = "HellowIamManager" , and password = "itspass"</h4>
+ 
 <h3>Auth</h3>
 <ul>
-  <h4>Its guaranted that when you run , the app will add initialy manager with email = "HellowIamManager" , and password = "itspass"</h4>
   <li><code>Post /api/Auth/Register</code>: register</li>    
   <li><code>Post /api/Auth/Login</code>: login</li>
 </ul>
