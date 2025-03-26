@@ -2,8 +2,11 @@
 
 <h3>🎯This project Api is a University Management System API built using ASP.NET Core. The API provides endpoints to manage various entities in a University environment, such as Students, Courses, Instructors, Departments, and Faculties. It also includes JWT authentication for user registration and login.</h3>
 
-![Image](https://github.com/user-attachments/assets/a60dc2b1-f06c-4aeb-950a-452ffeb68450)
+<hr>
 
+![Image](https://github.com/user-attachments/assets/732deedc-2564-4909-a4c3-3cff51360a20)
+
+<hr>
 <h2>💥Features</h2>
 <ul>
   <li>🔐JWT authentication system for user registration and login.</li>
@@ -14,13 +17,13 @@
   <li>Many-to-many relationship between Students and Courses.</li>
   <li>One-to-many relationships between Department and Students, Faculty and Departments, Department and Students, Department and Courses.</li>
 </ul>
-
+<hr>
 <h2>📌Endpoints</h2>
 
- <h4>Its guaranted that when you run , the app will add initialy manager with email = "HellowIamManager" , and password = "itspass"</h4>
- 
+ <h4>Its guaranted that when you run , the app will add initialy manager with (Email  =<code> "HellowIamManager"</code> with  password = <code>"itspass"</code>)</h4>
 <h3>Auth</h3>
 <ul>
+  <li><code>Post /api/Auth/Add Manager</code>: for add manager</li>
   <li><code>Post /api/Auth/Register</code>: register</li>    
   <li><code>Post /api/Auth/Login</code>: login</li>
 </ul>
@@ -79,9 +82,14 @@
   <li><code>Update /api/Course/{id}</code>: update Course with {id}</li>
   <li><code>Delete /api/Course/{id}</code>: delete Course with {id}</li>
 </ul>
-
+<hr>
 <h2>🔐Authentication</h2>
 This API uses JWT authentication for user registration and login. Users need to register and login to obtain a refresh token, which they will use to access the various entity endpoints.
+<hr>
+
+<h2>💡Authorization</h2>
+Manager has access to any thing ,Users just has access to register and login in Auth controller.
+<hr>
 
 <h2>🥇Technologies </h2>
 <ul>
@@ -92,7 +100,7 @@ This API uses JWT authentication for user registration and login. Users need to 
   <li>Entity Framework Core for database operations.</li>
   <li>SQL Server.</li>
 </ul>
-
+<hr>
 <h2>🌹How to Run the Project</h2>
 <ol>
   <li>Clone this repository to your local machine.</li>
@@ -100,5 +108,5 @@ This API uses JWT authentication for user registration and login. Users need to 
   <li>Add migration <code>Add-Migration init</code></li>
   <li>Update Data base <code>Update-Database</code></li>
   <li>Run the project</li>
-  <li>Finally do not Forget to Login as a manager to access any thing with (Email  = "HellowIamManager" with  password = "itspass") , to be Authorized to access Methods</li>
+  <li>Finally do not Forget to Login as a manager to access any thing with (Email  =<code> "HellowIamManager"</code> with  password = <code>"itspass"</code>) , to be Authorized to access Methods</li>
 </ol>
