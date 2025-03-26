@@ -86,6 +86,11 @@
 <h2>🔐Authentication</h2>
 This API uses JWT authentication for user registration and login. Users need to register and login to obtain a refresh token, which they will use to access the various entity endpoints.
 <hr>
+
+<h2>💡Authorization</h2>
+Manager has access to any thing ,Users just has access to register and login in Auth controller.
+<hr>
+
 <h2>🥇Technologies </h2>
 <ul>
   <li>ASP.NET Core for building the API.</li>
